@@ -4,9 +4,9 @@ import { Feather } from '@expo/vector-icons'
 
 export default function Cronometro() {
   return (
-   <>
+    <View style={styles.container}>
       <View style={styles.main}>
-        <View  style={styles.counter}>
+        <View style={styles.counter}>
           <Text style={styles.counterText}>{"11:00"}</Text>
         </View>
       </View>
@@ -16,11 +16,15 @@ export default function Cronometro() {
           <Feather name="play" style={styles.footerIconPlay} size={50} color="#e02041" />
         </TouchableOpacity>
       </View>
-    </>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#242424',
+  },
   main: {
     flex: 1,
     alignItems: 'center',
