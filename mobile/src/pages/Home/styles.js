@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     borderRadius: 50
   },
   cardTitle: {
+    paddingTop: 10,
     color: '#e02041',
     fontSize: 20,
   },
