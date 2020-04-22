@@ -19,14 +19,15 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',
-    borderWidth: 2,
+    borderWidth: 10,
     borderColor: '#e02041',
   },
   counterText: {
     width: 200,
     fontSize: 40,
     color: '#e02041',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontWeight: 'bold'
   },
   title: {
     color: '#dadada',
