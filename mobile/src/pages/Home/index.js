@@ -8,14 +8,18 @@ export default function Home() {
 
   function navigateToCronometro() {
     navigation.navigate('Cronometro')
-}
+  } 
+
+  function navigateToTimer() {
+    navigation.navigate('Timer')
+  }
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.card} onPress={navigateToCronometro}>
         <Feather name="watch"  size={50} color="#e02041" />
         <Text style={styles.cardTitle}>Cronômetro</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.card}>
+      <TouchableOpacity style={styles.card} onPress={navigateToTimer}>
         <Feather name="clock"  size={50} color="#e02041" />
         <Text style={styles.cardTitle}>Timer</Text>
       </TouchableOpacity>
