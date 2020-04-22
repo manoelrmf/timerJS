@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons'
+import styles from './styles'
 
 const formatNumber = number => `0${number}`.slice(-2);
 
@@ -15,8 +16,6 @@ export default function Cronometro() {
   const [isActive, setIsActive] = useState(false);
   const { mins, secs } = getRemaining(segundos);
 
-
-  
 
   function toggle (){
     setIsActive(!isActive);
@@ -59,52 +58,3 @@ export default function Cronometro() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#242424',
-  },
-  main: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  counter: {
-    height: 250,
-    width: 250,
-    backgroundColor: 'transparent',
-    borderRadius: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 2,
-    borderColor: '#e02041',
-  },
-  counterText: {
-    width: 200,
-    fontSize: 40,
-    color: '#e02041',
-    textAlign: 'center'
-  },
-  title: {
-    color: '#dadada',
-  },
-  footer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 70,
-  },
-  footerButton: {
-    margin: 15,
-    width: 80,
-    height: 80,
-    borderRadius: 100,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderWidth: 2,
-    borderColor: '#e02041',
-  },
- 
-});
