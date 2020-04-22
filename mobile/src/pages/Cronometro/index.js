@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 import styles from './styles'
+import Header from './../../components/Header'
 
 const formatNumber = number => `0${number}`.slice(-2);
 
@@ -40,6 +41,8 @@ export default function Cronometro() {
 
 
   return (
+    <>
+    <Header />
     <View style={styles.container}>
       <View style={styles.main}>
         <View style={styles.counter}>
@@ -56,5 +59,6 @@ export default function Cronometro() {
         </TouchableOpacity>
       </View>
     </View>
+    </>
   );
 }
